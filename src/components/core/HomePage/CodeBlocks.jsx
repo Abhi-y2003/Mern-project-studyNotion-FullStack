@@ -6,15 +6,15 @@ import red from '../../../assets/Images/red.jpg'
 import blue from '../../../assets/Images/blue.jpg'
 
 const CodeBlocks = ({
-    position, heading, subheading, ctabtn1, ctabtn2, codeblock, backgroundGradient, codeColor
+    position, heading, subheading, ctabtn1, ctabtn2, codeblock, backgroundGradient, codeColor, color
 }) => {
   return (
-    <div className={`flex ${position} my-20 justify-between gap-10`}>
+    <div className={`md:flex ${position} my-24 justify-between gap-10 flex-col mb-32 `}>
 
         {/*Section 1 */}
-        <div className='w-[50%] flex flex-col gap-8'>
+        <div className='md:w-[50%] flex flex-col gap-8 sm:w-11/12 sm:mx-auto sm:m-10 '>
             {heading}
-            <div className='text-richblack-300'>
+            <div className='text-richblack-300 w-fit'>
                 {subheading}
             </div>
 
@@ -33,9 +33,12 @@ const CodeBlocks = ({
         </div>
 
         {/*Section 2 */}
-        <div className='flex flex-row h-fit  w-[100%] py-5 lg:w-[500px] border z-50'>
-          
+        <div className='flex flex-row h-fit  w-[100%] lg:w-[500px] gap-16 z-50 sm:w-11/12 md:w-[50%]  outline-1 outline-offset-0 outline-richblack-400 mx-auto relative bg-richblack-800'>
 
+          <div className='absolute -z-20 blur-3xl  w-[38%] '>
+            <img src={color === "red"? red : blue}/>
+          </div>
+          <div className='flex backdrop-blur-3xl w-full shadow-transparent py-5 '>
             <div className='text-center flex flex-col w-[10%] text-richblack-400 font-inter font-bold'>
                 <p>1</p>
                 <p>2</p>
@@ -66,6 +69,11 @@ const CodeBlocks = ({
                 />
 
             </div>
+            </div>
+        </div>
+
+        <div className='h-40'>
+
         </div>
 
 

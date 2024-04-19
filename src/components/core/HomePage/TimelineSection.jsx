@@ -32,7 +32,7 @@ const timeline= [
 const TimelineSection = () => {
   return (
     <div>
-        <div className='flex gap-24 items-center my-20'>
+        <div className='flex flex-col md:flex-row gap-24 items-center my-20'>
 
             <div className='w-[45%] flex flex-col gap-5'>
                 {
@@ -60,11 +60,17 @@ const TimelineSection = () => {
                 <img src={TimelineImage} alt='timeline image'
                 className='rounded-lg shadow-white object-cover h-fit'/>
 
-                <div className='absolute bg-caribbeangreen-700 flex text-white uppercase py-10'>
+                <div className='absolute bg-caribbeangreen-700 flex text-white uppercase py-7 left-[50%] 
+                translate-x-[-50%] translate-y-[-50%]'>
 
-                    <div>
+                    <div className='flex flex-row gap-5 items-center border-r border-caribbeangreen-100 px-10 '>
                         <p className='text-3xl font-bold'>10</p>
-                        <p>Years of Experience</p>
+                        <p className='text-caribbeangreen-300 text-sm'>Years of Experience</p>
+                    </div>
+
+                    <div className='flex gap-5 items-center px-7 '>
+                        <p className='text-3xl font-bold'>250</p>
+                        <p className='text-caribbeangreen-300 text-sm'>Type of courses</p>
                     </div>
 
                 </div>
