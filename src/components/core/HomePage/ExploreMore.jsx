@@ -59,17 +59,15 @@ const ExploreMore = () => {
 
 
         {/*Course cards ka group*/}
-        <div className=''>
+        <div className='flex'>
             {
                 courses.map( (element, index)=> {
-                    return (
-                        <courseCard 
+                    return <courseCard 
                         key={index}
                         cardData={element}
                         currentCard = {currentCard}
                         setCurrentCard = {setCurrentCard}
                         />
-                    )
                 })
             }
         </div>

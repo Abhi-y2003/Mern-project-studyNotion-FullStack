@@ -81,7 +81,7 @@ const { auth, isInstructor, isStudent, isAdmin } = require("../middlewares/auth"
 // // Category can Only be Created by Admin
 // // TODO: Put IsAdmin Middleware here
  router.post("/createCategory", auth, isAdmin, createCategory)
- router.get("/showAllCategories", showAllCategory)
+ router.get("/showAllCategory", showAllCategory)
  router.post("/getCategoryPageDetails", categoryPageDetails)
 
 // // ********************************************************************************************************
